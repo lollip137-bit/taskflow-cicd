@@ -1,41 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
-  background-color: #f4f6f9;
+  background: linear-gradient(135deg, #eef3ff, #f8fbff);
+  color: #1f2937;
 }
 
 header {
-  background-color: #1f3c88;
+  background: linear-gradient(135deg, #1f3c88, #2563eb);
   color: white;
-  padding: 20px;
+  padding: 45px 20px;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  margin-top: 12px;
+  font-size: 17px;
+}
+
 nav {
-  background-color: #142850;
-  padding: 12px;
+  background: #0f172a;
+  padding: 15px;
   text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 10px;
-  font-weight: bold;
+  margin: 0 14px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: #2563eb;
 }
 
 .container {
-  width: 80%;
-  margin: 30px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+  width: 82%;
+  margin: 35px auto;
+  background: rgba(255,255,255,0.95);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 0;
+  color: #111827;
 }
 
 .card {
-  background-color: #e8eefc;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #e0ecff, #f1f6ff);
+  padding: 22px 28px;
+  margin: 12px;
+  border-radius: 14px;
   display: inline-block;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.12);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  background: linear-gradient(135deg, #1f3c88, #2563eb);
+  color: white;
+  border: none;
+  padding: 13px 18px;
+  margin: 8px 5px 8px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+th {
+  background: #1f3c88;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 92%;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .card {
+    display: block;
+  }
 }
